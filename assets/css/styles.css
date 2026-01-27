@@ -132,6 +132,26 @@ img {
   background: rgba(31, 36, 48, 0.06);
 }
 
+.subnav {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subnav a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(31, 111, 120, 0.12);
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.subnav a:hover {
+  background: rgba(31, 111, 120, 0.2);
+}
+
 .button {
   display: inline-flex;
   align-items: center;

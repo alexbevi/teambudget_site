@@ -24,17 +24,21 @@
               <span>{{ site.title }}</span>
             </a>
             <div class="nav-links">
-              <a href="#features">Features</a>
               <a href="/blog/">Blog</a>
               <a href="/docs/">Docs</a>
               <a href="/articles/">Articles</a>
-              <a href="#how">How it works</a>
-              <a href="#pricing">Pricing</a>
-              <a href="#faq">FAQ</a>
               <a class="button ghost" href="#tour">See How It Works</a>
               <a class="button primary" href="#contact">Request Demo</a>
             </div>
           </nav>
+          {% if page.url == "/" or page.url == "/index.html" %}
+            <div class="subnav">
+              <a href="#features">Features</a>
+              <a href="#how">How it works</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#faq">FAQ</a>
+            </div>
+          {% endif %}
         </div>
       </header>
 
