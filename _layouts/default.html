@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="container">
+          <div class="eyebrow">Built for minor hockey treasurers</div>
+          <nav class="nav">
+            <div class="logo">{{ site.title }}</div>
+            <div class="nav-links">
+              <a href="#features">Features</a>
+              <a href="#how">How it works</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#faq">FAQ</a>
+              <a class="button ghost" href="#tour">See How It Works</a>
+              <a class="button primary" href="#contact">Request Demo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="logo">{{ site.title }}</div>
+            <p class="muted">One place for every team dollar.</p>
+          </div>
+          <div>
+            <div class="footer-title">Explore</div>
+            <a href="#features">Features</a>
+            <a href="#tour">Product Tour</a>
+            <a href="#docs">Documentation</a>
+          </div>
+          <div>
+            <div class="footer-title">Trust & Safety</div>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Support</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+          <div>
+            <div class="footer-title">Contact</div>
+            <span>hello@hockeytreasurer.app</span>
+            <span>Response within 24 hours</span>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2026 Hockey Team Budget Manager. All rights reserved.</div>
+      </footer>
+    </div>
+  </body>
+</html>

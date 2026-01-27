@@ -1,0 +1,10 @@
+title: Hockey Team Budget Manager
+email: hello@hockeytreasurer.app
+description: >-
+  One place for every team dollar. Track budgets, payments, and reconciliation
+  without spreadsheets — built for volunteer treasurers who need clarity fast.
+baseurl: ""
+url: ""
+
+plugins:
+  - jekyll-feed
