@@ -7,9 +7,10 @@
         <span>{{ site.title }}</span>
       </a>
       <div class="nav-links">
-        <a href="/blog/">Blog</a>
-        <a href="/docs/">Docs</a>
-        <a href="/articles/">Articles</a>
+        {% assign current_url = page.url | default: '' %}
+        <a class="{% if current_url contains '/blog/' %}nav-active{% endif %}" href="/blog/">Blog</a>
+        <a class="{% if current_url contains '/docs/' %}nav-active{% endif %}" href="/docs/">Docs</a>
+        <a class="{% if current_url contains '/articles/' %}nav-active{% endif %}" href="/articles/">Articles</a>
         <a class="button primary" href="#" data-modal-open>Request Demo</a>
       </div>
     </nav>
