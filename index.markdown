@@ -305,36 +305,3 @@ layout: default
     </div>
   </div>
 </section>
-
-<section class="section" id="contact">
-  <div class="container contact">
-    <div>
-      <h2>Ready for a calmer season?</h2>
-      <p class="muted">Tell us about your team and we’ll set up a demo tailored to your league.</p>
-    </div>
-    <form class="contact-form">
-      <label>
-        Team name
-        <input type="text" placeholder="Northside U15" />
-      </label>
-      <label>
-        Your email
-        <input type="email" placeholder="treasurer@hockey.org" />
-      </label>
-      <label>
-        Association size
-        <select>
-          <option>Single team</option>
-          <option>2-5 teams</option>
-          <option>6-15 teams</option>
-          <option>15+ teams</option>
-        </select>
-      </label>
-      <label>
-        How can we help?
-        <textarea rows="4" placeholder="What would make your season easier?"></textarea>
-      </label>
-      <button class="button primary" type="submit">Send request</button>
-    </form>
-  </div>
-</section>

@@ -1,0 +1,64 @@
+<div class="modal" id="demo-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+    <button class="modal-close" type="button" data-modal-close aria-label="Close">×</button>
+    <h2 id="demo-modal-title">Request a Demo</h2>
+    <p class="muted">Tell us about your team and we’ll follow up with a tailored walkthrough.</p>
+    <form class="contact-form">
+      <label>
+        Team name
+        <input type="text" placeholder="Northside U15" />
+      </label>
+      <label>
+        Your email
+        <input type="email" placeholder="treasurer@hockey.org" />
+      </label>
+      <label>
+        Association size
+        <select>
+          <option>Single team</option>
+          <option>2-5 teams</option>
+          <option>6-15 teams</option>
+          <option>15+ teams</option>
+        </select>
+      </label>
+      <label>
+        How can we help?
+        <textarea rows="4" placeholder="What would make your season easier?"></textarea>
+      </label>
+      <button class="button primary" type="submit">Send request</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const modal = document.getElementById("demo-modal");
+    if (!modal) return;
+    const openers = document.querySelectorAll("[data-modal-open]");
+    const closers = modal.querySelectorAll("[data-modal-close]");
+
+    const open = () => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    };
+
+    const close = () => {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    };
+
+    openers.forEach((btn) => btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      open();
+    }));
+
+    closers.forEach((btn) => btn.addEventListener("click", close));
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") close();
+    });
+  })();
+</script>

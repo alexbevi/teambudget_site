@@ -1,0 +1,47 @@
+<header class="site-header">
+  <div class="container">
+    <div class="eyebrow">Built for minor hockey treasurers</div>
+    <nav class="nav">
+      <a class="logo" href="/">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }} logo" />
+        <span>{{ site.title }}</span>
+      </a>
+      <div class="nav-links">
+        <a href="/blog/">Blog</a>
+        <a href="/docs/">Docs</a>
+        <a href="/articles/">Articles</a>
+        <a class="button primary" href="#" data-modal-open>Request Demo</a>
+      </div>
+    </nav>
+    {% if page.url == "/" or page.url == "/index.html" %}
+      <div class="subnav">
+        <a href="#features" data-section="features">Features</a>
+        <a href="#how" data-section="how">How it works</a>
+        <a href="#tour" data-section="tour">See How It Works</a>
+        <a href="#pricing" data-section="pricing">Pricing</a>
+        <a href="#faq" data-section="faq">FAQ</a>
+      </div>
+      <script>
+        (() => {
+          const links = Array.from(document.querySelectorAll(".subnav a[data-section]"));
+          const sections = links
+            .map((link) => document.getElementById(link.dataset.section))
+            .filter(Boolean);
+          if (!sections.length) return;
+          const activate = () => {
+            let current = sections[0];
+            const top = window.scrollY + 140;
+            for (const section of sections) {
+              if (section.offsetTop <= top) current = section;
+            }
+            links.forEach((link) => link.classList.toggle("active", link.dataset.section === current.id));
+          };
+          window.addEventListener("scroll", activate, { passive: true });
+          window.addEventListener("load", activate);
+          activate();
+        })();
+      </script>
+    {% endif %}
+  </div>
+</header>
+{% include demo-modal.html %}

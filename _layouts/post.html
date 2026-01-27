@@ -15,26 +15,7 @@
   </head>
   <body>
     <div class="page">
-      <header class="site-header">
-        <div class="container">
-          <div class="eyebrow">Built for minor hockey treasurers</div>
-          <nav class="nav">
-            <a class="logo" href="/">
-              <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }} logo" />
-              <span>{{ site.title }}</span>
-            </a>
-            <div class="nav-links">
-              <a href="/#features">Features</a>
-              <a href="/blog/">Blog</a>
-              <a href="/docs/">Docs</a>
-              <a href="/articles/">Articles</a>
-              <a href="/#how">How it works</a>
-              <a class="button ghost" href="/#tour">See How It Works</a>
-              <a class="button primary" href="/#contact">Request Demo</a>
-            </div>
-          </nav>
-        </div>
-      </header>
+      {% include nav.html %}
 
       <main class="section">
         <div class="container">
