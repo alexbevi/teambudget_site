@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}" />
+    <title>{{ page.title }} · {{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,33 +19,37 @@
         <div class="container">
           <div class="eyebrow">Built for minor hockey treasurers</div>
           <nav class="nav">
-            <a class="logo" href="#top">
+            <a class="logo" href="/">
               <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }} logo" />
               <span>{{ site.title }}</span>
             </a>
             <div class="nav-links">
-              <a href="#features">Features</a>
+              <a href="/#features">Features</a>
               <a href="/blog/">Blog</a>
               <a href="/docs/">Docs</a>
               <a href="/articles/">Articles</a>
-              <a href="#how">How it works</a>
-              <a href="#pricing">Pricing</a>
-              <a href="#faq">FAQ</a>
-              <a class="button ghost" href="#tour">See How It Works</a>
-              <a class="button primary" href="#contact">Request Demo</a>
+              <a href="/#how">How it works</a>
+              <a class="button ghost" href="/#tour">See How It Works</a>
+              <a class="button primary" href="/#contact">Request Demo</a>
             </div>
           </nav>
         </div>
       </header>
 
-      <main>
-        {{ content }}
+      <main class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h1>{{ page.title }}</h1>
+            <p class="muted">{{ page.subtitle }}</p>
+          </div>
+          {{ content }}
+        </div>
       </main>
 
       <footer class="site-footer">
         <div class="container footer-grid">
           <div>
-            <a class="logo" href="#top">
+            <a class="logo" href="/">
               <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }} logo" />
               <span>{{ site.title }}</span>
             </a>
@@ -53,15 +57,15 @@
           </div>
           <div>
             <div class="footer-title">Explore</div>
-            <a href="#features">Features</a>
-            <a href="#tour">Product Tour</a>
-            <a href="#docs">Documentation</a>
+            <a href="/blog/">Blog</a>
+            <a href="/docs/">Documentation</a>
+            <a href="/articles/">Articles</a>
           </div>
           <div>
             <div class="footer-title">Trust & Safety</div>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Support</a>
-            <a href="#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/#contact">Support</a>
+            <a href="/#pricing">Pricing</a>
           </div>
           <div>
             <div class="footer-title">Contact</div>
