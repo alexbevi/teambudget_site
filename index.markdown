@@ -5,11 +5,11 @@ layout: default
 <section class="hero" id="top">
   <div class="container hero-grid">
     <div>
-      <p class="kicker">Financial clarity for minor hockey</p>
-      <h1>Run your team budget with confidence — without spreadsheets.</h1>
+      <p class="kicker">Team Budget for Hockey</p>
+      <h1>Run your hockey team budget with confidence — without spreadsheets.</h1>
       <p class="lead">
-        Track budgets, payments, and reconciliation in one calm, organized place. Built for volunteer
-        treasurers who need accurate reporting and less end-of-season chaos.
+        Team Budget makes hockey team finances simple. Track budgets, payments, and reconciliation in one
+        calm, organized place for volunteer treasurers who need accurate reporting and less end-of-season chaos.
       </p>
       <div class="cta-row">
         <a class="button primary" href="#contact">Request Demo</a>

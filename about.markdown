@@ -7,8 +7,8 @@ permalink: /about/
 <section class="section">
   <div class="container about">
     <div>
-      <h1>About Hockey Team Budget Manager</h1>
-      <p class="lead">We help community teams thrive by making finances simple, transparent, and trustworthy.</p>
+      <h1>About Team Budget for Hockey</h1>
+      <p class="lead">We help hockey families and community teams thrive with simple, transparent finances.</p>
       <p>
         Volunteer treasurers already do enough. Our mission is to remove spreadsheet chaos and replace it
         with a calm, accurate financial workflow that parents and associations can trust.
